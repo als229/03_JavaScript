@@ -238,26 +238,277 @@ function check17(){
 }
 
 function check18(){
+  
+  for(let row = 1; row <= 3; row++){
+    let result = "";
 
+    for(let col = 1; col <= 4; col++){
+      result += col;
+    }
+    console.log(result);
+    console.log("====");
+  }
 }
 
 function check19(){
 
+  for(let row = 1; row <= 4; row++){
+    let result = "";
+
+    for(let col = 1; col <= 5; col++){
+      result += col;
+    }
+    console.log(result);
+    console.log("====");
+  }
 }
 
 function check20(){
+  
+  for(let row = 3; row >= 1; row--){
+    let result = "";
 
+    for(let col = 6; col >= 1; col--){
+      result += col;
+    }
+    console.log(result);
+    console.log("====");
+  }
 }
 
 function check21(){
 
+  for(let row = 1; row <= 5; row++){
+    let result = "";
+
+    for(let col = 1; col <= row; col++){
+      result += col;
+    }
+    console.log(result);
+  }
 }
 
 function check22(){
+  // 방법1
+  /*   for(let row = 3; row <= 7; row++){
+    let result = "";
 
+    for(let col = 3; col <= row; col++){
+      result += col;
+    }
+    console.log(result);
+  } */
+
+  // 방법2
+  for(let row = 1; row <= 5; row++){
+    let result = "";
+
+    for(let col = 1; col <= row; col++){
+      result += col + 2;
+    }
+    console.log(result);
+  }
 }
 
 function check23(){
+
+  for(let row = 1; row <= 3; row++){
+    let result = "";
+    for(let col = 1; col <= row; col++){
+      result += "*";
+    }
+    console.log(result);
+  }
+
+}
+
+function check24(){
+  const input = document.getElementById("input24");
+  
+  if(input.value.length === 0){
+    alert("숫자를 입력해 주세요");
+    return
+  }
+
+  const inputNum = Number(document.getElementById("input24").value);
+
+  // 입력된 숫자가 0이하일 경우
+  if(inputNum <= 0){
+    alert("0보다 큰 수를 입력하세요.");
+    return;
+  }
+
+  for(let row = 1; row <= inputNum; row++){
+    let result = "";
+    for(let col = 1; col <= row; col++){
+      result += "*"
+    }
+    console.log(result);
+  }
+}
+
+function check25(){
+  /* 방법 1  
+  for(let row = 1; row <= 4; row++){
+    let result = "";
+    for(let col = 4; col >= row; col--){
+      result += "*";
+    }
+    console.log(result);
+  } 
+  */
+  // 방법 2  
+  for(let row = 1; row <= 4; row++){
+    let result = "";
+    for(let col = 1; col <= 5-row; col++){
+      result += "*";
+    }
+    console.log(result);
+  } 
+
+  // 방법 3
+  // for(let row = 4; row >= 1; row--){
+  //   let result = "";
+  //   for(let col = 1; col <= row; col++){
+  //     result += "*";
+  //   }
+  //   console.log(result);
+  // }
+}
+
+function check26(){
+  let cnt = 0; // 처음에는 세어진게 없는 숫자 0 셋팅
+
+  for(let num = 1; num <= 30; num++){
+    if(num % 4 === 0){
+      cnt++;
+    }
+  }
+
+  console.log("몇개? " + cnt);
+}
+
+function check27(){
+  const inputNum = Number(document.getElementById("input27").value);
+  let cnt = 0;
+
+  for(let num = 1; num <= 100; num++){
+    if(num % inputNum === 0){
+      cnt++;
+    }
+  }
+
+  console.log(`1 ~ 100사이 ${inputNum}의 배수는 ${cnt}개 있습니다.`);
+}
+
+function check28(){
+  let cnt = 1;
+
+  for(let row = 1; row <= 3; row++){
+    let str = "";
+    for(let col = 1; col <= 4; col++){
+      str += `${cnt++} ` ; // == cnt + " "  
+    }
+    console.log(str);
+  }
+}
+/** prompt를 이용해서 입력 받은 숫자 모두 더하기 */
+// 단, 취소를 누를 시 종료
+// 누적된 합계를 alert로 출력
+function check29(){
+  
+  // prompt("내용") : 입력이 포함된 알림창
+  // - 확인 클릭 : 입력한 내용 반환
+  // - 취소 클릭 : null 반환
+
+  let sum = 0;
+  let val; // prompt에 입력된 값을 저장할 변수
+  
+  //  while 테스트
+  // let test = 1;
+  // while(test <= 5){
+  //   console.log(test);
+  //   test++;
+  // }
+
+  while((val = prompt("숫자 입력(취소 클릭 시 종료)")) !== null){
+    sum += Number(val);
+  }
+  
+  alert(`합계 : ${sum}`);
+}
+
+function check30(){
+  const gimbap      = 4000; 
+  const ramen       = 4500;
+  const donkkaseu   = 9000;
+
+  // 메누별 주문 갯수
+  let gCnt = 0;
+  let rCnt = 0;
+  let dCnt = 0;
+  
+  // prompt에 저장된 값을 저장할 변수
+  let input; // undefined
+
+  // input 변수에 저장된 값이 null이 아닐 경우 반복
+  // (undefined랑 null 은 다름)
+  while(input !== null){
+    input = prompt("메뉴를 번호 입력(1.김밥 2.라면 3.돈까쓰)");
+    switch (input) {
+      case "1" : gCnt++ ;break;
+      case "2" : rCnt++ ;break;
+      case "3" : dCnt++ ;break;
+      case null : alert("주문 완료!"); break;
+      default : alert("잘못 입력 하셨습니다."); break;
+    }
+  }
+  
+  // innerHTML 사용 필요
+  // 주문된 메뉴만 출력(cnt 변수에 저장된 값이 0 초과)
+  
+  let outputHTML = ''; // 출력할 html 코드가 포함된 문자열
+  
+  if(gCnt > 0){ // 김밥을 주문한 경우
+    outputHTML += `<li>김밥 ${gCnt} : ${gCnt*gimbap}</li>`
+  }
+  
+  if(rCnt > 0){ // 라면을 주문한 경우
+    outputHTML += `<li>라면 ${rCnt} : ${rCnt*ramen}</li>`
+  }
+  
+  if(dCnt > 0){ // 돈까스를 주문한 경우
+    outputHTML += `<li>돈까스 ${dCnt} : ${dCnt*donkkaseu}</li>`
+  }
+  /* 합계 */
+  const sum = (gimbap * gCnt) + (ramen * rCnt) + (donkkaseu * dCnt);
+  
+  outputHTML += `<li>합계 : ${sum}원</li>`
+  
+  document.getElementById("result30").innerHTML = outputHTML;
+}
+
+function check31(){
+
+}
+
+function check32(){
+
+}
+
+function check33(){
+
+}
+
+function check34(){
+
+}
+
+function check35(){
+
+}
+
+function check36(){
 
 }
 
