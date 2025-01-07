@@ -487,28 +487,3 @@ function check30(){
   
   document.getElementById("result30").innerHTML = outputHTML;
 }
-
-function check31(){
-
-}
-
-function check32(){
-
-}
-
-function check33(){
-
-}
-
-function check34(){
-
-}
-
-function check35(){
-
-}
-
-function check36(){
-
-}
-
