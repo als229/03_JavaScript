@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  margin: 50px auto; /* 상하/좌우 */
+}
+
+#input-box{
+  width: 10px;
+  height: 10px;
+}
+
+
+.option-container{
+  display: flex;
+}
+
+#input-text{
+  width: 500px;
+}
+.option-container, .inner-container > span{
+  font-weight: bold;
+}
+
+.inner-container{
+  width: 100%;
+}
+.button-container {
+  text-align: center;
+}
+
+.box-container{
+  display: flex;
+  justify-content: center
+}
+
+#input-box{
+  border: 2px solid black;
+  margin-top: 50px;
+}

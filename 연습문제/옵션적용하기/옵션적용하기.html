@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>옵션 적용하기</title>
+  <link rel="stylesheet" href="옵션적용하기.css">
+</head>
+<body>
+  <main>
+    <section class="option-area">
+      <div class="option-container">
+        <div class="inner-container">
+          <span>너비 : </span>
+          <input type="number" id="width-px"> px
+        </div>
+        <div class="inner-container">
+          <span>높이 :</span> <input type="number" id="height-px"> px
+        </div>
+      </div>
+      <div class="option-container">
+        <div class="inner-container">
+          <span>글자크기 :</span> <input type="number" id="font-size"> px
+        </div>
+        <div class="inner-container">
+          <span>굵기 :</span>
+              보통 <input type="radio" name="bold-radio" value="normal"> 
+              굵게 <input type="radio" name="bold-radio" value="bold"> 
+        </div>
+      </div>
+      <div class="option-container">
+        <div class="inner-container">
+          <span>글자색 : <span><input type="text" id="font-color">
+        </div>
+        <div class="inner-container">
+          <span>배경색 :</span> <input type="text"id="bg-color">
+        </div>
+      </div>
+      <div class="option-container">
+        <div class="inner-container">
+          <span>가로정렬 : </span>
+          왼쪽 <input type="radio" name="row-text" value="left"> 
+          가운데 <input type="radio" name="row-text" value="center"> 
+          오른쪽 <input type="radio" name="row-text" value="right"> 
+        </div>
+      </div>
+      <div class="option-container">
+        <div class="inner-container">
+          <span>세로정렬 : </span>
+          위 <input type="radio" name="col-text" value="up"> 
+          가운데 <input type="radio" name="col-text" value="center"> 
+          아래 <input type="radio" name="col-text" value="down"> 
+        </div>
+      </div>
+      <div class="option-container">
+        <div class="inner-container">
+          <span>출력 문자열 : </span>
+          <input type="text" id="input-text">
+        </div>
+      </div>
+      <div class="button-container">  
+        <button id="submit-btn">적용하기</button>
+      </div>
+    </section>
+    <div class="box-container">
+      <div id="input-box">
+        <span id="box-span"></span>
+      </div>
+    </div>
+  </main>
+  
+  <script src="옵션적용하기.js"></script>
+</body>
+</html>
