@@ -73,8 +73,6 @@ testC.onclick = function(){
 const test1 = document.querySelector("#test1");
 
 test1.addEventListener("click", function(){
-
-  
   // opacity : 불투명 정도를 설정하는 속성
   // 0 : 투명
   // 1 : 불투명(선명하게 보임)
@@ -90,7 +88,7 @@ test1.addEventListener("click", function(){
   
   // 투명도가 0 미만이 된 경우(완전히 투명해진 이후)
   if(test1.style.opacity < 0){
-    test1.style.opacity = 1;
+    test1.style.opacity = 1; // 다시 불투명하게 변경
   }
 });
 
@@ -102,4 +100,28 @@ test1.addEventListener("click", function(){
   // #test1에 num을 1 증가 시킨 값을 대입
   test1.innerText = ++num;
 
+});
+
+/* 실습 문제 */
+
+/*
+  "변경하기" 버튼 클릭 시
+  input 요소에 작성된 색상 값을 얻어와
+  바로 위 .display 요소의 배경색 변경하기
+*/
+
+/* 변경하기버튼 */
+const changeBtn = document.querySelector("#changeBtn");
+const inputs = document.querySelectorAll(".inputColor"); // input 5개
+const displays = document.querySelectorAll(".display"); // 출력화면 5개
+// -> 위 아래로 연결된 .display와 .inputColor의 인덱스 번호가 같아요!!
+
+// 변경하기 버튼이 클릭 되었을 때
+changeBtn.addEventListener("click", function(){
+  for(let i=0 ; i < inputs.length ; i++){
+
+    // i번째 .inputColor에 작성된 값을 얻어와
+    // i번째 .display의 배경색으로 대입
+    displays[i].style.backgroundColor = inputs[i].value;
+  }
 });

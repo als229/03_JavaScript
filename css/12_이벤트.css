@@ -39,3 +39,33 @@
   user-select: none;
   cursor :pointer;
 }
+
+/* 실습 문제 */
+
+.practice-container, .practice-container *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.practice-container{
+  display: flex;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.display{
+  width: 120px;
+  height: 120px;
+  border-bottom: 1px solid gray;
+}
+
+.inputColor{
+  width: 120px;
+  border : none;
+  padding: 2px;
+}
