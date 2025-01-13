@@ -12,7 +12,6 @@ for(let numLists of numList){
       return;
     }
 
-    console.log(cnt);
     resultSpan.append(e.target.innerText);
     cnt++;
   });
