@@ -1,0 +1,103 @@
+*{
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: 20px;
+  width: 900px;
+  height: 300px;
+  
+}
+
+.header{
+  height: 10%;
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.body{
+  height: 230px;
+  display: flex;
+  word-break: break-all;
+}
+
+.footer{
+  height: 10%;
+  font-weight: bold;
+}
+
+.store-name{
+  font-size: 25px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 15px 15px 0px;
+}
+
+.ul-list > li{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  
+}
+
+.inner-div{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+
+.body-container{
+  width: 750px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.store-name{
+  width: 600px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;    /* 커서 손가락 */
+}
+
+.store-name-input > input{
+  width: 600px;
+  display: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-container{
+  width: 750px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.btn-container > button{
+  width: 100px;
+  height: 25px;
+  border-width: 2px solid black;
+  cursor: pointer;    
+  user-select: none; 
+  background-color: white;
+  border-radius: 5px;
+}
+

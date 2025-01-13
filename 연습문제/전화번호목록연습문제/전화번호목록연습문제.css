@@ -1,0 +1,138 @@
+*{
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: 50px;
+  width: 600px;
+  height: 700px;
+  display: flex;
+}
+
+
+.phone-board{
+  width: 60%;
+}
+
+.list-board{
+  border-left: 1px solid rgb(207, 205, 205);
+  margin-left: 20px;
+  width: 35%;
+}
+
+.button-container{
+  margin: 5px;
+  height: 5%;
+  text-align: center;
+}
+
+.btn-innerContainer{
+  height: 100%;
+}
+
+.btn{
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  cursor: pointer;    /* 커서 손가락 */
+  font-size: 15px;
+}
+
+#add-btn{
+  background-color: white;
+  border-color : rgb(63, 153, 63);
+  color : green;
+  font-weight: bold;
+}
+
+#reset-btn{
+  background-color: white;
+  border-color : gray;
+  color : gray;
+  font-weight: bold;
+}
+
+
+.number-area{
+  border-bottom : 1px solid rgb(207, 205, 205);
+  height: 10%;
+  display: flex;
+  justify-content : center;
+  align-items : center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.japan-area{
+  height: 75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number{
+  width: 118px;
+  height: 118px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;    /* 커서 손가락 */
+  user-select: none; /* 블럭 막기 */
+  border-radius: 50%;
+  transition-duration: 0.3s;
+  display: flex;
+  justify-content : center;
+  align-items : center;
+}
+
+.list-header{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.add-list{
+  display: flex;
+  flex-direction: column;
+}
+.inner-list{
+  margin-left: 10px;
+  display: flex;
+}
+#number-span{
+  width: 80%;
+}
+
+#number-div{
+  font-weight: bold;
+  width: 80%;
+}
+
+#star-btn{
+  width: 10%;
+  cursor: pointer;    /* 커서 손가락 */
+  user-select: none; /* 블럭 막기 */
+}
+#x-btn{
+  margin-left: 5px;
+  width: 5%;
+  cursor: pointer;    /* 커서 손가락 */
+  user-select: none; /* 블럭 막기 */
+}
+
+#star-btn:hover{ font-weight: bold;}
+#x-btn:hover{ font-weight: bold;}
+
+#add-btn:hover{
+  background-color: green;
+  color: white;
+}
+#reset-btn:hover{
+  background-color: gray;
+  color: white;
+}
+.number:hover {background-color: grey;}
+.number:active{scale : 120%;}
+
