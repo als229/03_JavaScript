@@ -86,8 +86,6 @@ for(let userValBtn of userValBtns){
       let userVal = e.target.innerText;
       // 승무패 테이블
       const scoreTable = document.querySelector("#score").children;
-      // 결과 히스토리 상위 ul
-      const gameHistory = document.querySelector("#gameHistory");
       
       // 1:가위 2:바위 3:보
       if(userVal === "가위"){
