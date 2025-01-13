@@ -1,8 +1,5 @@
 const submitBtn = document.querySelector("#submit-btn");
 
-
-/////////////////////////////////////////////////////////////////
-
 submitBtn.addEventListener("click", function(){
   
   const divBox = document.querySelector("#input-box");
@@ -14,7 +11,6 @@ submitBtn.addEventListener("click", function(){
   
   // 글자 크기
   const fontSize = document.querySelector("#font-size").value;
-  
   
   // 글자색
   const fontColor = document.querySelector("#font-color").value;
@@ -31,6 +27,8 @@ submitBtn.addEventListener("click", function(){
   // 출력 문자열
   const inputText = document.querySelector("#input-text").value;
   
+  //////////////////////////////////////////////////////////////////////////////////////////
+
   // 너비 입력
   divBox.style.width = `${Number(widthPx)}px`;
   
@@ -54,7 +52,7 @@ submitBtn.addEventListener("click", function(){
   divBox.style.backgroundColor = `${bgColor}`;
   
   // // 가로정렬
-  // divBox.style. = ``;
+  // divBox.style.flexDirection = `row`;
   
   // // 세로 정렬
   // divBox.style. = ``;
