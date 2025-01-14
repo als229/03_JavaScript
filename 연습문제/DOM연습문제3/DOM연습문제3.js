@@ -1,5 +1,6 @@
 const btn = document.querySelector("#btn");
 const divList = document.querySelectorAll(".row");
+// const fruits = document.querySelectorAll(".fruits:checked"); 이렇게 체크된거 가져올 수 도 있음.
 
 btn.addEventListener("click", () => {
   document.querySelector("#result").innerHTML = "none";
