@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 등록 연습</title>
+  <link rel="stylesheet" href="../회원등록연습/회원등록연습.css">
+</head>
+<body>
+  <main>
+    <div class="header">
+      <h1>회원 등록 시스템</h1>
+    </div>
+    <div class="body-container">
+      <div class="input-container">
+        <div class="input-header">
+          <h2>회원등록</h2>
+        </div>
+        <div class="input-body">
+          아이디:
+          <div class="input-div">
+            <input type="text" class="input input-id">
+          </div>
+          이름:
+          <div class="input-div">
+            <input type="text"  class="input input-name">
+          </div>
+          전화번호:
+          <div class="input-div">
+            <input type="text" class="input input-phone">
+          </div>
+        </div>
+        <div class="btn-area">
+          <button id="insert-btn" >등록</button>
+        </div>
+      </div>
+      <div class="list-container">
+        <div class="list-header">
+          <h2>등록된 회원 목록</h2>
+        </div>
+        <div class="list-body">
+          <div>
+            <button id="del-btn">선택 삭제</button>
+            <table class="table">
+              <tr class="tr-class">
+                <th class="td-check"><input type="checkbox" id="th-check" class="check-box"></th>
+                <th class="td-content">아이디</th>
+                <th class="td-content">이름</th>
+                <th class="td-content">전화번호</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  
+  <script src="../회원등록연습/회원등록연습.js"></script>
+</body>
+</html>

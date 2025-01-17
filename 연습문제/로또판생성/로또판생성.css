@@ -1,0 +1,36 @@
+*{
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  margin: 10px;
+  border: 1px solid black;
+  width: 252px;
+  height: 452px;
+  display: flex;
+  align-items: center;
+  align-content: start;
+  flex-wrap: wrap;
+}
+
+.ball{
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ball-choice{
+  background-color: pink;
+}
+
+.hidden{ display: none; }
